@@ -44,12 +44,13 @@ class Dealer(Player):
 	"""Subclass of Player class with logic to determine if Dealer should hit"""
 
 	def hit(self):
-		"""calls get_card() depending on dealers current score"""
-		if self.score() < 17:
-			self.get_card()
-			return True
-		else:
-			return False
+		"""calls get_card() depending on dealers hit rule defined in Blackjack class"""
+		self.get_card()
+		# if self.score() < 17:
+		# 	self.get_card()
+		# 	return True
+		# else:
+		# 	return False
 
 	def first_ace(self):
 		"""if dealers first card is an Ace, correctly shows the value of 11"""
